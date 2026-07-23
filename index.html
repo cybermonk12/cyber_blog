@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>சைபர் வலைப்பதிவு | Cyber Blog</title>
+    <style>
+        :root {
+            --primary-gradient: linear-gradient(135deg, #6366f1, #a855f7, #ec4899);
+            --card-gradient: linear-gradient(to right bottom, #ffffff, #f8fafc);
+            --bg-color: #0f172a;
+            --text-main: #1e293b;
+            --text-sub: #64748b;
+            --accent-color: #6366f1;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            background-image: radial-gradient(at 0% 0%, rgba(99, 102, 241, 0.15) 0px, transparent 50%), 
+                              radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.15) 0px, transparent 50%);
+            min-height: 100vh;
+            padding: 15px;
+            padding-bottom: 50px;
+            color: #ffffff;
+        }
+
+        /* App Header */
+        .app-header {
+            background: var(--primary-gradient);
+            padding: 30px 20px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 25px -5px rgba(168, 85, 247, 0.4);
+            margin-bottom: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .app-header h1 {
+            font-size: 1.8em;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .app-header p {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+
+        /* Search Bar */
+        .search-container {
+            max-width: 600px;
+            margin: 0 auto 20px auto;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 15px 20px;
+            border-radius: 50px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            color: white;
+            font-size: 1em;
+            outline: none;
+            transition: 0.3s;
+        }
+
+        .search-input::placeholder {
+            color: #cbd5e1;
+        }
+
+        .search-input:focus {
+            border-color: #ec4899;
+            box-shadow: 0 0 15px rgba(236, 72, 153, 0.3);
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        /* Blog Container */
+        .blog-container {
+            max-width: 600px;
+            margin: 0 auto;
+            display: grid;
+            gap: 16px;
+        }
+
+        /* Card UI */
+        .blog-card {
+            background: var(--card-gradient);
+            border: 1px solid rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 20px;
+            box-shadow: 0 4px 15px -1px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .blog-card::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            width: 6px;
+            background: var(--primary-gradient);
+            border-radius: 6px 0 0 6px;
+        }
+
+        .blog-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(99, 102, 241, 0.2);
+        }
+
+        .card-meta {
+            font-size: 0.75em;
+            color: var(--accent-color);
+            font-weight: 700;
+            margin-bottom: 6px;
+        }
+
+        .blog-title {
+            font-size: 1.25em;
+            color: var(--text-main);
+            margin: 0 0 10px 0;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .blog-desc {
+            font-size: 0.85em;
+            color: var(--text-sub);
+            margin-bottom: 18px;
+            line-height: 1.5;
+        }
+
+        .read-btn {
+            display: block;
+            background: var(--primary-gradient);
+            color: white;
+            padding: 12px 20px;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.9em;
+            text-align: center;
+            box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+        }
+
+        /* Pagination Controls */
+        .pagination {
+            max-width: 600px;
+            margin: 25px auto 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+        }
+
+        .page-btn {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .page-btn:hover:not(:disabled) {
+            background: var(--primary-gradient);
+            border-color: transparent;
+        }
+
+        .page-btn:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        .page-info {
+            font-size: 0.9em;
+            color: #cbd5e1;
+            font-weight: 600;
+        }
+
+        /* Status Message */
+        .status-message {
+            text-align: center;
+            padding: 40px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 20px;
+            color: #94a3b8;
+            border: 1px dashed #334155;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <header class="app-header">
+        <h1>✨ சைபர் வலைப்பதிவு</h1>
+        <p>தொழில்நுட்பம் மற்றும் தகவல்களின் தொகுப்பு</p>
+    </header>
+
+    <!-- Search Box -->
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-input" placeholder="🔍 கட்டுரைகளைத் தேடுக...">
+    </div>
+
+    <!-- Blog Cards List -->
+    <main id="blog-list" class="blog-container">
+        <div class="status-message">
+            <p>கட்டுரைகளைத் தேடுகிறது...</p>
+        </div>
+    </main>
+
+    <!-- Pagination -->
+    <div id="pagination" class="pagination" style="display: none;">
+        <button id="prev-btn" class="page-btn" onclick="changePage(-1)">← முந்தைய</button>
+        <span id="page-info" class="page-info">பக்கம் 1</span>
+        <button id="next-btn" class="page-btn" onclick="changePage(1)">அடுத்த →</button>
+    </div>
+
+    <script>
+        // உங்கள் விவரங்கள் (இது திரையில் எங்கும் தெரியாது)
+        const GITHUB_USERNAME = 'cybermonk12'; 
+        const GITHUB_REPO = 'cyber_blog';            
+        const FOLDER_NAME = 'post'; 
+
+        const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FOLDER_NAME}`;
+
+        let allPosts = [];
+        let filteredPosts = [];
+        let currentPage = 1;
+        const postsPerPage = 10;
+
+        async function fetchBlogs() {
+            const blogListContainer = document.getElementById('blog-list');
+            
+            try {
+                const response = await fetch(apiUrl);
+                if (!response.ok) throw new Error('தரவைப் பெறுவதில் சிக்கல் ஏற்பட்டுள்ளது.');
+
+                const files = await response.json();
+                
+                // HTML மற்றும் MD கோப்புகளை மட்டும் பிரித்தெடுத்தல்
+                allPosts = files.filter(file => file.name.endsWith('.html') || file.name.endsWith('.md'))
+                                .map(file => {
+                                    let title = file.name.replace(/\.(html|md)$/, '').replace(/-/g, ' ');
+                                    title = title.charAt(0).toUpperCase() + title.slice(1);
+                                    return {
+                                        title: title,
+                                        url: `/post/${file.name}`,
+                                        name: file.name
+                                    };
+                                });
+
+                filteredPosts = [...allPosts];
+                renderPosts();
+
+            } catch (error) {
+                blogListContainer.innerHTML = `
+                    <div class="status-message" style="color: #f87171; border-color: #ef4444;">
+                        <p>⚠️ பிழை: வலைப்பதிவுகளை ஏற்றுவதில் சிக்கல் ஏற்பட்டுள்ளது. சிறிது நேரம் கழித்து முயற்சிக்கவும்.</p>
+                    </div>`;
+            }
+        }
+
+        // கட்டுரைகளைத் திரையில் காட்டுவதற்கான ஃபங்ஷன்
+        function renderPosts() {
+            const blogListContainer = document.getElementById('blog-list');
+            const paginationContainer = document.getElementById('pagination');
+            blogListContainer.innerHTML = '';
+
+            if (filteredPosts.length === 0) {
+                blogListContainer.innerHTML = `
+                    <div class="status-message">
+                        <p>📭 நீங்கள் தேடிய கட்டுரை எதுவும் காணப்படவில்லை!</p>
+                    </div>`;
+                paginationContainer.style.display = 'none';
+                return;
+            }
+
+            // Pagination கணக்கீடு (10 posts per page)
+            const startIndex = (currentPage - 1) * postsPerPage;
+            const endIndex = startIndex + postsPerPage;
+            const paginatedPosts = filteredPosts.slice(startIndex, endIndex);
+
+            paginatedPosts.forEach(post => {
+                const card = document.createElement('article');
+                card.className = 'blog-card';
+                card.innerHTML = `
+                    <div>
+                        <div class="card-meta">📝 கட்டுரை</div>
+                        <h2 class="blog-title">${post.title}</h2>
+                        <p class="blog-desc">இந்தக் கட்டுரையை வாசித்து முழுமையான தகவல்களை அறிந்து கொள்ளுங்கள்.</p>
+                    </div>
+                    <a href="${post.url}" class="read-btn">முழுமையாகப் படிக்க &rarr;</a>
+                `;
+                blogListContainer.appendChild(card);
+            });
+
+            updatePaginationUI();
+        }
+
+        // Pagination பட்டன்களைக் கட்டுப்படுத்தும் ஃபங்ஷன்
+        function updatePaginationUI() {
+            const paginationContainer = document.getElementById('pagination');
+            const prevBtn = document.getElementById('prev-btn');
+            const nextBtn = document.getElementById('next-btn');
+            const pageInfo = document.getElementById('page-info');
+
+            const totalPages = Math.ceil(filteredPosts.length / postsPerPage);
+
+            if (totalPages <= 1) {
+                paginationContainer.style.display = 'none';
+                return;
+            }
+
+            paginationContainer.style.display = 'flex';
+            pageInfo.innerText = `பக்கம் ${currentPage} / ${totalPages}`;
+
+            prevBtn.disabled = (currentPage === 1);
+            nextBtn.disabled = (currentPage === totalPages);
+        }
+
+        function changePage(step) {
+            currentPage += step;
+            renderPosts();
+            window.scrollTo({ top: 0, behavior: 'smooth' }); // பக்கம் மாறியதும் மேலே செல்லும்
+        }
+
+        // தேடுதல் வசதி (Live Search Input Event)
+        document.getElementById('search-input').addEventListener('input', (e) => {
+            const searchTerm = e.target.value.toLowerCase().trim();
+            filteredPosts = allPosts.filter(post => 
+                post.title.toLowerCase().includes(searchTerm)
+            );
+            currentPage = 1; // தேடும்போது முதல் பக்கத்திற்கு சென்றுவிடும்
+            renderPosts();
+        });
+
+        // தளம் திறந்தவுடன் இயங்க
+        fetchBlogs();
+    </script>
+
+</body>
+</html>
