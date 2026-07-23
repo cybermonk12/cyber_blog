@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>என் தானியங்கி வலைப்பதிவு (Auto-Detect Blog)</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f4f7f6; margin: 0; padding: 20px; }
+        .header { text-align: center; background: #1a365d; color: white; padding: 30px; border-radius: 8px; margin-bottom: 30px; }
+        .blog-container { max-width: 800px; margin: 0 auto; display: grid; gap: 20px; }
+        .blog-card { background: white; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); transition: 0.3s; }
+        .blog-card:hover { transform: translateY(-5px); box-shadow: 0 5px 15px rgba(0,0,0,0.2); }
+        .blog-title { font-size: 1.5em; color: #2b6cb0; margin: 0 0 10px 0; }
+        .read-btn { display: inline-block; background: #2b6cb0; color: white; padding: 10px 15px; text-decoration: none; border-radius: 4px; margin-top: 10px; }
+        .loading { text-align: center; font-size: 1.2em; color: #666; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>தானியங்கி வலைப்பதிவு (No DB Blog)</h1>
+        <p>GitHub-ல் Upload செய்யப்படும் கட்டுரைகள் இங்கு தானாகவே தோன்றும்</p>
+    </div>
+
+    <!-- வலைப்பதிவுகள் தோன்றும் இடம் -->
+    <div id="blog-list" class="blog-container">
+        <div class="loading">வலைப்பதிவுகளைத் தேடுகிறது... (Loading posts from GitHub...)</div>
+    </div>
+
+    <script>
+        // 1. உங்கள் GitHub விவரங்களை இங்கு மாற்றவும்
+        const GITHUB_USERNAME = 'YOUR_GITHUB_USERNAME'; 
+        const GITHUB_REPO = 'YOUR_REPO_NAME';           
+        const FOLDER_NAME = 'posts'; // ஃபைல்களை வைக்கும் ஃபோல்டர் பெயர்
+
+        // GitHub API Link
+        const apiUrl = `https://api.github.com/repos/${GITHUB_USERNAME}/${GITHUB_REPO}/contents/${FOLDER_NAME}`;
+
+        async function fetchBlogs() {
+            const blogListContainer = document.getElementById('blog-list');
+            
+            try {
+                // GitHub API-ல் இருந்து கோப்புகளைத் தேடுதல்
+                const response = await fetch(apiUrl);
+                
+                if (!response.ok) {
+                    throw new Error('GitHub-ல் இருந்து தரவைப் பெறுவதில் சிக்கல்!');
+                }
+
+                const files = await response.json();
+                blogListContainer.innerHTML = ''; // Loading-ஐ நீக்குதல்
+
+                // கோப்புகள் எதுவும் இல்லை என்றால்
+                if (files.length === 0) {
+                    blogListContainer.innerHTML = '<p style="text-align:center;">வலைப்பதிவுகள் எதுவும் இல்லை!</p>';
+                    return;
+                }
+
+                // ஒவ்வொரு ஃபைலாக எடுத்து Card உருவாக்குதல்
+                files.forEach(file => {
+                    // .html அல்லது .md கோப்புகளை மட்டும் எடுத்துக்கொள்ளுதல்
+                    if (file.name.endsWith('.html') || file.name.endsWith('.md')) {
+                        
+                        // ஃபைல் பெயரில் உள்ள '-' மற்றும் நீட்டிப்புகளை நீக்கி Title-ஆக மாற்றுதல்
+                        // எ.கா: "my-first-post.html" -> "My First Post"
+                        let title = file.name.replace(/\.(html|md)$/, '').replace(/-/g, ' ');
+                        title = title.charAt(0).toUpperCase() + title.slice(1);
+
+                        // கார்டு (Card) உருவாக்குதல்
+                        const card = document.createElement('div');
+                        card.className = 'blog-card';
+                        card.innerHTML = `
+                            <h2 class="blog-title">${title}</h2>
+                            <p>இந்தக் கட்டுரை GitHub-ல் இருந்து தானாகவே எடுக்கப்பட்டது.</p>
+                            <a href="${file.html_url}" target="_blank" class="read-btn">முழுமையாகப் படிக்க &rarr;</a>
+                        `;
+                        
+                        blogListContainer.appendChild(card);
+                    }
+                });
+
+            } catch (error) {
+                console.error('Error:', error);
+                blogListContainer.innerHTML = `<p style="color:red; text-align:center;">பிழை: ${error.message} <br> (GitHub Username மற்றும் Repo Name சரியாக உள்ளதா என சரிபார்க்கவும்)</p>`;
+            }
+        }
+
+        // வலைத்தளம் திறந்தவுடன் இயங்க
+        fetchBlogs();
+    </script>
+
+</body>
+</html>
