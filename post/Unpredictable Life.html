@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="வாழ்க்கையில் எதுவும் நிரந்தரமில்லை. உறவுகள், நட்பு, காதல் - எல்லாம் தற்காலிகம். இந்த உண்மையை ஏற்றுக்கொண்டு வாழ்வது எப்படி?">
+    <title>நிரந்தரமற்ற உறவுகள்: வாழ்க்கையின் உண்மை</title>
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="நிரந்தரமற்ற உறவுகள்: வாழ்க்கையின் உண்மை">
+    <meta property="og:description" content="இன்று பேசும் நண்பர்கள் 5 வருடம் கழித்து மறந்து போவார்கள். பெற்றோர் இறந்த பிறகு 3-5 வருடங்களில் நினைவுகள் மங்கும். வாழ்க்கை இப்படித்தான்.">
+    <meta property="og:image" content="https://picsum.photos/id/1015/1200/630">
+    <meta property="og:url" content="https://yourblog.example.com/transient-life">
+    <meta property="og:type" content="article">
+    <meta property="og:site_name" content="Life Reflections Blog">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&family=Noto+Sans+SC:wght@400;700&display=swap');
+        
+        :root {
+            --primary: #6a11cb;
+            --secondary: #f953c6;
+            --accent: #00f5ff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Noto Sans SC', sans-serif;
+            line-height: 1.7;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+            color: #e0e0e0;
+            min-height: 100vh;
+        }
+        
+        .mobile-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: #1a1a2e;
+            min-height: 100vh;
+            box-shadow: 0 0 30px rgba(0,0,0,0.8);
+            overflow: hidden;
+            border-radius: 20px;
+            position: relative;
+        }
+        
+        header {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 2rem 1.5rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+            right: 0;
+            height: 40px;
+            background: #1a1a2e;
+            border-radius: 50% 50% 0 0;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 0.5rem;
+            color: white;
+            text-shadow: 0 4px 15px rgba(0,0,0,0.4);
+        }
+        
+        .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.95;
+            color: #fff;
+        }
+        
+        .nav {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(255,255,255,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        
+        .nav a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+        
+        .nav a:hover {
+            background: rgba(255,255,255,0.2);
+        }
+        
+        main {
+            padding: 1.5rem;
+        }
+        
+        .section {
+            margin-bottom: 2.5rem;
+            background: rgba(255,255,255,0.05);
+            padding: 1.5rem;
+            border-radius: 16px;
+            border-left: 6px solid var(--accent);
+        }
+        
+        h2 {
+            color: var(--accent);
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+            border-bottom: 2px solid rgba(0,245,255,0.3);
+            padding-bottom: 0.5rem;
+        }
+        
+        p {
+            margin-bottom: 1.1rem;
+            font-size: 1.05rem;
+        }
+        
+        .quote {
+            font-style: italic;
+            border-left: 5px solid var(--secondary);
+            padding-left: 1.2rem;
+            margin: 1.5rem 0;
+            color: #ccc;
+        }
+        
+        .example-card {
+            background: rgba(255,255,255,0.08);
+            padding: 1rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 2rem 1rem;
+            background: rgba(0,0,0,0.4);
+            color: #aaa;
+            font-size: 0.9rem;
+        }
+        
+        .highlight {
+            color: #ffd700;
+            font-weight: 500;
+        }
+        
+        .tag {
+            display: inline-block;
+            background: linear-gradient(45deg, #f953c6, #6a11cb);
+            color: white;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            margin: 4px;
+        }
+    </style>
+</head>
+<body>
+    <div class="mobile-container">
+        <!-- Header -->
+        <header>
+            <h1>நிரந்தரமற்ற உறவுகள்</h1>
+            <p class="subtitle">வாழ்க்கையின் உண்மை: எதுவும் நிலையானதல்ல</p>
+            <div style="margin-top: 1rem; font-size: 0.95rem; opacity: 0.9;">
+                எழுதியவர்: Grok • ஜூலை 2026
+            </div>
+        </header>
+        
+        <!-- Navigation -->
+        <div class="nav">
+            <a href="#intro">முன்னுரை</a>
+            <a href="#psychology">மனம்</a>
+            <a href="#society">சமூகம்</a>
+            <a href="#animals">விலங்குகள்</a>
+        </div>
+        
+        <main>
+            <!-- Intro -->
+            <section id="intro" class="section">
+                <h2>முன்னுரை</h2>
+                <p>இன்று நம்முடன் பேசும் நண்பர்கள் ஐந்து வருடங்கள் கழித்து நம்மை மறந்துவிடுவார்கள். பள்ளி, கல்லூரியில் படித்தவர்கள் அடுத்த கட்டத்திற்கு செல்லும்போது நம்மை மறந்துவிடுகிறார்கள். நாம் இறந்த பிறகு கூட நமது பெற்றோர், உறவினர்களின் நினைவுகள் 3 முதல் 5 வருடங்களுக்குள் மங்கிவிடும்.</p>
+                <p class="quote">"வாழ்க்கை என்பது ஒரு தற்காலிக பயணம். எல்லா உறவுகளும் ஒரு காலத்தில் முடிவுக்கு வரும்."</p>
+                <p>காதல், திருமணம், பிள்ளைகள் — எல்லாமே இதே போலத்தான். விலங்குகளும் சில வருடங்களுக்குப் பிறகு மறந்துவிடுகின்றன. அப்படியிருக்க, ஏன் மற்றவர்களை நம்பி, அவர்களுக்காக, சமூகத்திற்காக ஒரு பொய்யான வாழ்க்கையை வாழ வேண்டும்?</p>
+            </section>
+            
+            <!-- Human Brain & Psychology -->
+            <section id="psychology" class="section">
+                <h2>மனித மூளை & மறதி</h2>
+                <p>மனித மூளை தகவல்களை தேர்ந்தெடுத்து சேமிக்கிறது. அன்றாட வாழ்க்கையின் சுமையில் பழைய உறவுகள், நினைவுகள் பின்னுக்குத் தள்ளப்படுகின்றன. நியூரோசயின்ஸ் படி, நீண்டகால நினைவுகள் (long-term memory) கூட நேரம் செல்ல செல்ல வலுவிழக்கின்றன.</p>
+                <div class="example-card">
+                    <strong>உதாரணம்:</strong> பழைய பள்ளி நண்பர்களை 10 வருடங்கள் கழித்து சந்தித்தால், அவர்கள் உங்களை அடையாளம் கண்டுகொள்ள சிரமப்படுவார்கள்.
+                </div>
+            </section>
+            
+            <!-- History -->
+            <section class="section">
+                <h2>வரலாறு & உதாரணங்கள்</h2>
+                <p>வரலாற்றில் பல பெரிய தலைவர்கள், கலைஞர்கள் இறந்த பிறகு சில தலைமுறைகளுக்குள் மறக்கப்பட்டனர். உதாரணமாக, பண்டைய எகிப்திய பார்வோக்களின் பெயர்கள் கூட முழுமையாக அறியப்படவில்லை.</p>
+            </section>
+            
+            <!-- Society -->
+            <section id="society" class="section">
+                <h2>சமூகம் & சமூக அழுத்தம்</h2>
+                <p>சமூகம் நம்மை "உறவுகளைப் பேணுங்கள்", "நண்பர்களைத் தக்க வைத்துக் கொள்ளுங்கள்" என்று சொல்கிறது. ஆனால் உண்மையில் இது ஒரு பொய்யான சுழற்சி. மக்கள் தங்கள் சொந்த வாழ்க்கை, பிரச்சினைகளில் மூழ்கியிருக்கிறார்கள்.</p>
+                <p class="highlight">நம்மைச் சார்ந்து வாழ்வது தவறு. நம்மை நாமே மதிப்பிட வேண்டும்.</p>
+            </section>
+            
+            <!-- Animals -->
+            <section id="animals" class="section">
+                <h2>விலங்குகள் & உணர்வுகள்</h2>
+                <p>நாய், பூனை போன்ற விலங்குகள் கூட தங்கள் எஜமானரை சில வருடங்கள் கழித்து மறக்கும் அல்லது புதியவர்களுடன் பழகும். இயற்கை இப்படித்தான் வடிவமைக்கப்பட்டுள்ளது — தகவமைப்பு (adaptation).</p>
+            </section>
+            
+            <!-- Death & Relatives -->
+            <section class="section">
+                <h2>மரணம் & உறவினர்கள்</h2>
+                <p>ஒருவர் இறந்த பிறகு, அவரது நினைவுகள் முதலில் குடும்பத்தில் இருக்கும். ஆனால் 3-5 வருடங்களில் அந்த நினைவுகள் அருகிவிடும். புதிய தலைமுறை வரும்போது பழையவர்கள் முழுமையாக மறக்கப்படுகிறார்கள்.</p>
+            </section>
+            
+            <!-- Conclusion -->
+            <section class="section">
+                <h2>முடிவுரை</h2>
+                <p>இந்த உண்மையை ஏற்றுக்கொண்டால், நாம் மற்றவர்களை நம்பி வாழாமல், <span class="highlight">தன்னம்பிக்கையுடன்</span>, தற்போதைய தருணத்தை அனுபவித்து வாழலாம். உறவுகள் வரும், போகும் — ஆனால் நீங்கள் இருப்பீர்கள்.</p>
+                
+                <div style="text-align:center; margin: 2rem 0;">
+                    <span class="tag">#Impermanence</span>
+                    <span class="tag">#LifeTruth</span>
+                    <span class="tag">#SelfLove</span>
+                </div>
+            </section>
+        </main>
+        
+        <footer>
+            <p>© 2026 - வாழ்க்கையை அனுபவியுங்கள். எதையும் நிரந்தரமாக எதிர்பார்க்காதீர்கள்.</p>
+            <p style="margin-top: 0.5rem;">Mobile Optimized Blog</p>
+        </footer>
+    </div>
+    
+    <script>
+        // Simple smooth scroll for nav
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+        
+        console.log('%cநிரந்தரமற்ற உறவுகள் Blog Loaded ✨', 'color:#00f5ff; font-size:14px');
+    </script>
+</body>
+</html>
