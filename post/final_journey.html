@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>இறுதிப் பயணம்: 90 நாட்களின் உளவியலும், உயிரின் மீட்சியும்</title>
+    
+    <!-- Important OG Meta Tags for Social Media & SEO -->
+    <meta property="og:title" content="இறுதிப் பயணம்: 90 நாட்களின் உளவியலும், உயிரின் மீட்சியும்">
+    <meta property="og:description" content="வாழ்வின் இறுதி 3 மாதங்கள்: மனித மூளையில் நடக்கும் நரம்பியல் மாற்றங்கள், குடும்பத்தின் தவிப்பு மற்றும் மரணத்தை வெல்லும் அன்பின் கதை.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://example.com/tamil-blog-terminal-psychology">
+    <meta property="og:site_name" content="Deep Psychology & Life Blog">
+
+    <style>
+        :root {
+            --bg-color: #0f172a;
+            --card-bg: #1e293b;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-blue: #38bdf8;
+            --accent-purple: #c084fc;
+            --accent-rose: #fb7185;
+            --accent-green: #34d399;
+            --accent-amber: #fbbf24;
+            --font-main: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            font-family: var(--font-main);
+            line-height: 1.8;
+            padding-bottom: 60px;
+        }
+
+        /* Mobile App Container */
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background-color: var(--bg-color);
+            min-height: 100vh;
+            position: relative;
+            box-shadow: 0 0 40px rgba(0, 0, 0, 0.8);
+            overflow-x: hidden;
+        }
+
+        /* App Header / Navbar */
+        .app-header {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: rgba(15, 23, 42, 0.85);
+            backdrop-filter: blur(12px);
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .app-header .logo {
+            font-size: 1.1rem;
+            font-weight: 700;
+            background: linear-gradient(to right, var(--accent-blue), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .badge {
+            background: rgba(56, 189, 248, 0.15);
+            color: var(--accent-blue);
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        /* Hero Section */
+        .hero-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 280px;
+            background: linear-gradient(to bottom, transparent 40%, var(--bg-color) 100%);
+        }
+
+        /* Content Structure */
+        .content {
+            padding: 0 20px;
+            margin-top: -40px;
+            position: relative;
+            z-index: 10;
+        }
+
+        h1 {
+            font-size: 1.75rem;
+            font-weight: 800;
+            line-height: 1.4;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+
+        /* Author & Date Card */
+        .author-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(255, 255, 255, 0.05);
+            padding: 12px 16px;
+            border-radius: 14px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .author-info display {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .author-name {
+            font-weight: 700;
+            color: var(--accent-amber);
+            font-size: 0.95rem;
+        }
+
+        .post-date {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        /* Narrative Text */
+        p {
+            font-size: 1.05rem;
+            margin-bottom: 20px;
+            color: #cbd5e1;
+            text-align: justify;
+        }
+
+        h2 {
+            font-size: 1.4rem;
+            color: var(--accent-rose);
+            margin: 30px 0 15px 0;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: '';
+            display: inline-block;
+            width: 6px;
+            height: 24px;
+            background: var(--accent-rose);
+            margin-right: 10px;
+            border-radius: 4px;
+        }
+
+        h3 {
+            font-size: 1.2rem;
+            color: var(--accent-purple);
+            margin: 20px 0 10px 0;
+        }
+
+        /* Science & Fact Boxes */
+        .fact-box {
+            background: linear-gradient(135deg, rgba(30, 41, 59, 0.9), rgba(15, 23, 42, 0.9));
+            border-left: 4px solid var(--accent-blue);
+            padding: 18px;
+            border-radius: 12px;
+            margin: 25px 0;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+        }
+
+        .fact-box-title {
+            color: var(--accent-blue);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .fact-box p {
+            font-size: 0.95rem;
+            margin-bottom: 0;
+            color: #e2e8f0;
+        }
+
+        /* History Boxes */
+        .history-box {
+            background: rgba(192, 132, 252, 0.08);
+            border: 1px solid rgba(192, 132, 252, 0.3);
+            border-radius: 14px;
+            padding: 18px;
+            margin: 25px 0;
+        }
+
+        .history-box-title {
+            color: var(--accent-purple);
+            font-weight: 700;
+            font-size: 1rem;
+            margin-bottom: 8px;
+        }
+
+        /* Story Highlight Box */
+        .story-card {
+            background: rgba(251, 113, 133, 0.08);
+            border-radius: 16px;
+            padding: 20px;
+            margin: 25px 0;
+            border: 1px dashed rgba(251, 113, 133, 0.4);
+        }
+
+        /* Embedded Images */
+        .content-img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 16px;
+            margin: 20px 0 10px 0;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+
+        .img-caption {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            text-align: center;
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        /* Quote */
+        blockquote {
+            font-size: 1.1rem;
+            font-style: italic;
+            color: var(--accent-green);
+            border-left: 3px solid var(--accent-green);
+            padding-left: 15px;
+            margin: 25px 0;
+        }
+
+        /* Footer */
+        .app-footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+        }
+
+        .share-btn {
+            background: linear-gradient(135deg, var(--accent-blue), var(--accent-purple));
+            color: #fff;
+            border: none;
+            width: 100%;
+            padding: 14px;
+            border-radius: 12px;
+            font-size: 1rem;
+            font-weight: 700;
+            margin-top: 15px;
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+        }
+    </style>
+</head>
+<body>
+
+<div class="app-container">
+    <!-- App Header -->
+    <header class="app-header">
+        <div class="logo">🧠 Mind & Soul</div>
+        <span class="badge">Deep Psychology</span>
+    </header>
+
+    <!-- Hero Image -->
+    <div style="position: relative;">
+        <img class="hero-img" src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?q=80&w=1000&auto=format&fit=crop" alt="Peaceful Horizon">
+        <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="content">
+        <h1>இறுதிப் பயணம்: 90 நாட்களின் உளவியலும், உயிரின் மீட்சியும்</h1>
+        
+        <!-- Author & Date -->
+        <div class="author-card">
+            <div>
+                <div class="author-name">✍️ Author: Mr. X</div>
+                <div class="post-date">📅 25 ஜூலை, 2026</div>
+            </div>
+            <div style="font-size: 1.5rem;">⏳</div>
+        </div>
+
+        <!-- Introduction Story -->
+        <p>
+            வாழ்க்கை என்பது நாம் நினைப்பது போல முடிவற்ற ஒரு பெருங்கடல் அல்ல; அது எண்ணப்பட்ட சில துளிகளின் தொகுப்பு. 52 வயதான பள்ளி ஆசிரியர் <b>ராகவன்</b>, மருத்துவமனையின் வெள்ளைச் சுவர்களை வெறித்துப் பார்த்துக் கொண்டிருந்தார். மருத்துவரின் குரல் எங்கோ வெகு தொலைவில் கேட்பது போல இருந்தது: <i>"ராகவன், உங்கள் நுரையீரலைத் தாக்கியுள்ள நோய் இறுதி கட்டத்தை அடைந்துவிட்டது. நம்மிடம் அதிகபட்சம் 90 நாட்கள் (3 மாதங்கள்) மட்டுமே உள்ளன..."</i>
+        </p>
+
+        <p>
+            அந்த நொடி, அறையில் இருந்த கடிகாரத்தின் சத்தம் நின்றது. ராகவனின் மனதில் ஒரு புதிய கடிகாரம் ஓடத் தொடங்கியது—அது வினாடிகளால் அல்ல, மூச்சுக்காற்றால் அளக்கப்படும் கடிகாரம். மரணத்தை நோக்கிச் செல்லும் அந்த 90 நாட்களில் மனித மூளையில் என்ன நடக்கிறது? குடும்பம் எப்படி மாறுகிறது? மரணத்தின் அந்த இறுதித் தருணம் எத்தகையது? வாருங்கள், அறிவியலின் வழியாகவும், ராகவனின் கதையின் வழியாகவும் இந்தப் பயணத்தை மேற்கொள்வோம்.
+        </p>
+
+        <!-- Section 1: Inside the Brain -->
+        <h2>1. மூளையின் உள்ளே: நரம்பியல் மாற்றங்கள்</h2>
+        <p>
+            ஒருவருக்கு 3 மாதங்கள் மட்டுமே வாழ்நாள் உள்ளது என்ற செய்தி (Terminal Prognosis) கிடைத்தவுடனேயே, மூளையில் ஒரு பெரிய ரசாயனப் போர் தொடங்குகிறது. ஆரம்பத்தில், மூளையின் உணர்ச்சி மையமான <b>அமிக்டாலா (Amygdala)</b> மிகக் கடுமையான பயத்தையும், அதிர்ச்சியையும் உருவாக்குகிறது. இதுவே "அதிர்ச்சியும் மறுப்பும்" (Shock and Denial) என்ற நிலை.
+        </p>
+
+        <div class="fact-box">
+            <div class="fact-box-title">🔬 Science Fact: மூளையின் கால மாற்ற உணர்வு (Time Perception)</div>
+            <p>
+                நரம்பியல் அறிவியலின்படி, மரணத்தை நெருங்குபவர்களுக்கு நரம்புப் பரிமாற்றிகளில் (Neurotransmitters - Dopamine & Serotonin) ஏற்படும் மாற்றங்களால், காலத்தின் வேகம் மாறிவிடும். நாம் வாழும் ஒரு நாள், அவர்களுக்கு ஒரு மாதம் போலத் தோன்றும். மூளையின் 'ப்ரீப்ரண்டல் கார்டெக்ஸ்' (Prefrontal Cortex - பகுத்தறியும் பகுதி), கடந்த கால நினைவுகளை அதிவேகமாக அசைபோடத் தொடங்குவதால், 3 மாதங்கள் என்பது 30 வருட வாழ்வை மீண்டும் வாழ்ந்தது போன்ற உளவியல் நீட்டிப்பை (Psychological Time Dilation) உருவாக்குகிறது.
+            </p>
+        </div>
+
+        <p>
+            ராகவனுக்கு முதல் ஒரு மாதம் கடுமையான கோபமும், தனிமையும் ஏற்பட்டது. "ஏன் எனக்கு மட்டும் இப்படி நடக்க வேண்டும்?" என்ற கேள்வி அவரைத் தூங்க விடவில்லை. ஆனால், இரண்டாவது மாதத்தின் தொடக்கத்தில், மூளை தனது தற்காப்பு mechanisms-ஐ மாற்றி, அமைதியைத் தரும் <b>எண்டார்பின்களை (Endorphins)</b> சுரக்கத் தொடங்கியது. எதார்த்தத்தை ஏற்றுக்கொள்ளும் (Acceptance) மனநிலை உருவானது.
+        </p>
+
+        <img class="content-img" src="https://images.unsplash.com/photo-1516585427167-9f4af9627e6c?q=80&w=1000&auto=format&fit=crop" alt="Brain and Psychology">
+        <div class="img-caption">மனித மூளை மரணத்தை ஏற்றுக்கொள்ளும் போது ஏற்படும் உளவியல் அமைதி.</div>
+
+        <!-- Section 2: Family Dynamics -->
+        <h2>2. குடும்பம் மற்றும் சமூக இயக்கவியல்</h2>
+        <p>
+            மரணம் என்பது ஒரு தனி மனிதனுக்கு மட்டும் நிகழ்வதல்ல; அது முழு குடும்பத்தையும் மறுவடிவமைப்பு செய்யும் ஒரு நிகழ்வு. ராகவனின் வீட்டில், அவர் மனைவி லட்சுமியும், கல்லூரி செல்லும் மகன் கார்த்திக்கும் ஆரம்பத்தில் கண்ணீரில் மூழ்கினர். ஆனால் நாட்கள் செல்லச் செல்ல, வீட்டில் ஒரு ஆழமான அமைதி நிலவியது.
+        </p>
+
+        <p>
+            இங்கே உளவியலில் <b>"முன்கூட்டியே துயரப்படுதல்" (Anticipatory Grief)</b> என்ற ஒரு நிகழ்வு நடக்கிறது. அதாவது, நபர் உயிரோடு இருக்கும்போதே, அவர் இல்லாத எதிர்காலத்தை நினைத்துக் குடும்பம் அழத் தொடங்கும். அதே நேரத்தில், ராகவன் தன் குடும்பத்திற்கு பாரமாக இருக்கக்கூடாது என்பதற்காகவும், தன் பிரிவின் வலியை அவர்களுக்குக் குறைக்க வேண்டும் என்பதற்காகவும் மெதுவாக **உணர்வுப்பூர்வமான விலகலை (Emotional Detachment)** செய்யத் தொடங்கினார்.
+        </p>
+
+        <div class="story-card">
+            <h3 style="margin-top:0; color:#fb7185;">📖 ராகவனின் டைரி குறிப்பு (நாள் 65):</h3>
+            <p style="font-style: italic; margin-bottom: 0;">
+                "இப்போது என் குடும்பத்தின் மீது எனக்கு இருக்கும் அன்பு முன்னெப்போதையும் விட ஆயிரம் மடங்கு அதிகமாகிவிட்டது. ஆனால், அதை நான் வெளியே காட்டிக்கொள்வதைக் குறைத்துக் கொண்டேன். நான் அழக்கூடாது; நான் அழுதால் என் மனைவி உடைந்து போவாள். என் மகனிடம் வங்கிக் கணக்கு வழக்குகளைக் கற்றுக்கொடுக்கிறேன். ஒரு தந்தையாக என் கடமை முடிவடைவதை நான் உணர்கிறேன். என் அறை இப்போது சோகத்தின் கூடம் அல்ல; அது அன்பின் புனித ஆவணம்."
+            </p>
+        </div>
+
+        <!-- Section 3: World History -->
+        <h2>3. உலக வரலாற்றில் ανεழாத சுவடுகள்</h2>
+        <p>
+            வரலாற்றைத் திரும்பிப் பார்த்தால், தங்களுக்குக் குறைந்த காலமே உள்ளது என்பதை அறிந்த பல மாமனிதர்கள், அந்த இறுதி நாட்களில்தான் தங்கள் வாழ்வின் ஆகச்சிறந்த காவியங்களைப் படைத்துள்ளனர்.
+        </p>
+
+        <div class="history-box">
+            <div class="history-box-title">🌍 World History Incident: ரான்டி பாஷ் (Randy Pausch - The Last Lecture)</div>
+            <p>
+                அமெரிக்காவின் கார்னகி மெல்லன் பல்கலைக்கழகப் பேராசிரியரான <b>Randy Pausch</b>-க்கு கணையப் புற்றுநோய் வந்து, சில மாதங்களே வாழ்நாள் இருப்பதாக மருத்துவர்கள் கூறினர். அவர் சோர்ந்து போகவில்லை. செப்டம்பர் 18, 2007 அன்று அவர் ஆற்றிய <i>"The Last Lecture"</i> (இறுதி விரிவுரை) உலக வரலாற்றில் அழியாத இடம் பிடித்தது. "நம் கையில் கிடைக்கும் சீட்டுகளை (Cards) நாம் மாற்றி அமைக்க முடியாது; ஆனால் அந்தச் சீட்டுகளை வைத்து எப்படி விளையாடுவது என்பது நம் கையில் தான் உள்ளது" என்று கூறி, மரணத்தின் பிடியிலும் உலகிற்கு நம்பிக்கையை விதைத்துச் சென்றார்.
+            </p>
+        </div>
+
+        <div class="history-box">
+            <div class="history-box-title">🧠 Oliver Sacks மற்றும் "My Own Life"</div>
+            <p>
+                பிரபல நரம்பியல் நிபுணரும், எழுத்தாளருமான ஆலிவர் சாக்ஸ் (Oliver Sacks), தனக்குக் கல்லீரல் புற்றுநோய் வந்து சில மாதங்களே உள்ளதை அறிந்த போது, <i>"நான் இந்த அழகான பூமியில் ஒரு உணர்வுள்ள உயிரினமாக, சிந்தசிக்கும் மனிதனாக வாழ்ந்தேன். அதுவே எனக்குக் கிடைத்த மிகப்பெரிய பாக்கியம்"</i> என்று எழுதினார். மரணத்தின் விளிம்பில் மட்டுமே மனிதனுக்கு இந்த உச்சக்கட்ட நன்றியுணர்வு (Deep Gratitude) பிறக்கிறது.
+            </p>
+        </div>
+
+        <!-- Section 4: The Last Day -->
+        <h2>4. அந்த இறுதி நாள்: மரணத்தின் வாசல்</h2>
+        <p>
+            90-வது நாள். ராகவனின் உடல் மிகவும் பலவீனமடைந்துவிட்டது. ஆனால் அவரது கண்களில் ஒரு விசித்திரமான அமைதி இருந்தது. மருத்துவ உலகில் இதை <b>"Terminal Lucidity"</b> என்று அழைப்பார்கள். மாதக்கணக்கில் சோர்வாக இருந்தவர்கள், இறப்பதற்கு முந்தைய நாள் அல்லது சில மணி நேரங்களுக்கு முன் திடீரென மிகுந்த சுறுசுறுப்புடனும், தெளிவான நனவுடனும் பேசுவார்கள்.
+        </p>
+
+        <img class="content-img" src="https://images.unsplash.com/photo-1518495973542-4542c06a5843?q=80&w=1000&auto=format&fit=crop" alt="Light and Peace">
+        <div class="img-caption">இறுதித் தருணத்தில் மூளையில் ஏற்படும் காமா அலைகளின் ஒளி.</div>
+
+        <div class="fact-box">
+            <div class="fact-box-title">🧬 Science Fact: இறுதி நிமிடங்களில் மூளையில் என்ன நடக்கிறது? (The Final Minutes)</div>
+            <p>
+                2022-ம் ஆண்டு நரம்பியல் விஞ்ஞானிகள் இறக்கும் தருவாயில் இருந்த ஒரு மனிதனின் மூளை அலைகளை (EEG) தற்செயலாகப் பதிவு செய்தனர். இதயம் நிற்பதற்கு 30 வினாடிகளுக்கு முன்பும், பின்பும் மூளையில் <b>காமா அலைகள் (Gamma Oscillations)</b> அபரிமிதமாக அதிகரித்தது கண்டுபிடிக்கப்பட்டது! இந்த காமா அலைகள் தான் நாம் கனவு காணும்போதும், ஆழ்ந்த தியானத்தில் இருக்கும்போதும், பழைய நினைவுகளை நினைவுகூரும்போதும் உருவாகும். அதாவது, இறக்கும் தருவாயில் மனித மூளை தன் வாழ்நாளின் மிக அழகான நினைவுகளை ஒரு திரைப்படத்தைப் போல அதிவேகமாக ஓடவிட்டுப் பார்க்கிறது (Life Flashing Before Eyes). இது மரணத்தை ஒரு வலியற்ற, அமைதியான கனவாக மாற்ற மூளை செய்யும் மாயாஜாலம்!
+            </p>
+        </div>
+
+        <p>
+            ராகவன் தன் மனைவியின் கையை மெதுவாகப் பற்றிக் கொண்டார். மகனின் தலையை வருடினார். அவரது மூச்சு மெதுவாகக் குறைந்தது. எந்த பயமும் இன்றி, ஒரு நீண்ட பயணத்தை முடித்த திருப்தியுடன் அவரது கண்கள் மூடின. அந்த அறை முழுவதும் சோகத்தை விட, ஒரு புனிதமான அமைதி (Profound Peace) நிறைந்தது.
+        </p>
+
+        <!-- Section 5: After Death -->
+        <h2>5. மரணத்திற்குப் பின்: குடும்பத்தின் மீட்சி (Moving On)</h2>
+        <p>
+            ராகவனின் பிரிவுக்குப் பின், முதல் சில வாரங்கள் அந்த குடும்பத்திற்கு பெரும் சூனியமாக (Void) இருந்தது. மூளை அறிவியல் படி, ஒருவர் இறந்த பிறகும் நம் மூளையில் உள்ள நரம்பு மண்டலம் அவர்கள் எங்கோ உயிரோடு இருப்பதாகவே சில காலத்திற்கு நம்பும். அதனால்தான் கதவு தட்டும் சத்தம் கேட்டால், இறந்தவரே வந்துவிட்டது போல மனம் ஏமாறும்.
+        </p>
+
+        <p>
+            ஆனால், ராகவன் அந்த 90 நாட்களில் விட்டுச்சென்ற உளவியல் தயாரிப்பு, குடும்பத்தைக் காப்பாற்றியது. அவர் மனைவி லட்சுமி அழுதாலும், <i>"அவர் கடைசியாக நிம்மதியாகச் சென்றார், அதுவே போதும்"</i> என்று தன்னைத் தேற்றிக் கொண்டாள். மகன் கார்த்திக், தன் தந்தை தனக்குக் கற்றுக்கொடுத்த பொறுப்புகளை ஏற்றுக்கொண்டான்.
+        </p>
+
+        <blockquote>
+            "மரணத்தால் ஒரு மனிதனின் உடலை மட்டுமே பிரிக்க முடியும்; ஆனால் அவர் விட்டுச்சென்ற அன்பையும், நினைவுகளையும் காலத்தால் கூட அழிக்க முடியாது."
+        </blockquote>
+
+        <p>
+            <b>ஓராண்டுக்குப் பிறகு...</b><br>
+            ராகவன் பணிபுரிந்த பள்ளியின் விளாகத்தில், கார்த்திக்கும் லட்சுமியும் ஒரு மரக்கன்றை நட்டார்கள். அந்த மரம் காற்றில் அசைந்த போது, ராகவன் புன்னகைப்பது போலவே அவர்களுக்குத் தோன்றியது. அவர்கள் இப்போது துயரத்திலிருந்து மீண்டு (Moved On), ராகவனின் நினைவுகளோடு தங்கள் வாழ்க்கையை நம்பிக்கையுடன் வாழத் தொடங்கியிருந்தார்கள்.
+        </p>
+
+        <!-- Footer / Conclusion -->
+        <div class="app-footer">
+            <p style="text-align: center; color: var(--accent-amber); font-weight: 600;">
+                ✨ வாழ்க்கை எவ்வளவு நீளமானது என்பதில் இல்லை அதன் அர்த்தம்; அதை நாம் எப்படி வாழ்ந்தோம் என்பதில் தான் உள்ளது. ✨
+            </p>
+            <button class="share-btn">📲 இந்த கட்டுரையை பகிரவும் (Share Article)</button>
+            <div style="margin-top: 15px; font-size: 0.8rem; color: var(--text-secondary);">
+                © 2026 Mind & Soul Blog. Designed & Written by Mr. X.<br>
+                Published on: July 25, 2026
+            </div>
+        </div>
+    </main>
+</div>
+
+</body>
+</html>
