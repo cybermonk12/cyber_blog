@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph Tags (OG Tags) -->
+    <meta property="og:title" content="வாழ்க்கை என்னும் சக்கரம்: மனிதனும் சமூகத்தின் எழுதப்படாத விதிகளும்">
+    <meta property="og:description" content="பிறப்பு, படிப்பு, வேலை, திருமணம், குழந்தை என சுழலும் மனித வாழ்க்கையும், அதன் பின்னால் இருக்கும் சமூகத்தின் அழுத்தங்களும் பற்றிய ஒரு ஆழமான பார்வை.">
+    <meta property="og:image" content="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=1000&auto=format&fit=crop">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://yourwebsite.com/human-lifecycle-tamil">
+
+    <title>வாழ்க்கை என்னும் சக்கரம் | Human Life Cycle Blog</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Mukta+Malar:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        :root {
+            --primary: #4a69bd;
+            --secondary: #60a3bc;
+            --accent: #ff6b81;
+            --dark: #2f3542;
+            --light: #f1f2f6;
+            --white: #ffffff;
+            --text: #57606f;
+        }
+
+        body {
+            font-family: 'Mukta Malar', sans-serif;
+            background-color: var(--light);
+            margin: 0;
+            padding: 0;
+            color: var(--dark);
+            line-height: 1.8;
+        }
+
+        /* App Style Container */
+        .app-container {
+            max-width: 480px;
+            margin: 0 auto;
+            background: var(--white);
+            min-height: 100vh;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+            position: relative;
+            padding-bottom: 80px;
+        }
+
+        .hero-section {
+            position: relative;
+        }
+
+        .hero-img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            border-bottom-left-radius: 25px;
+            border-bottom-right-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .badge {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: var(--accent);
+            color: var(--white);
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .content {
+            padding: 25px;
+        }
+
+        .title {
+            font-size: 26px;
+            font-weight: 700;
+            color: var(--dark);
+            margin: 10px 0;
+            line-height: 1.4;
+        }
+
+        .author-meta {
+            display: flex;
+            align-items: center;
+            font-size: 13px;
+            color: #747d8c;
+            margin-bottom: 25px;
+        }
+
+        .author-meta i {
+            margin-right: 5px;
+            color: var(--primary);
+        }
+
+        .story-card {
+            background: #f8f9fa;
+            border-radius: 15px;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-left: 5px solid var(--primary);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+        }
+
+        .story-card.accent {
+            border-left-color: var(--accent);
+            background: #fff0f2;
+        }
+
+        .story-card.success {
+            border-left-color: #2ed573;
+            background: #f1fcf5;
+        }
+
+        h2 {
+            font-size: 18px;
+            color: var(--primary);
+            margin-top: 0;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        p {
+            margin: 0 0 15px 0;
+            color: var(--text);
+            font-size: 15px;
+            text-align: justify;
+        }
+
+        .quote-box {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 20px;
+            border-radius: 15px;
+            margin: 25px 0;
+            font-style: italic;
+            text-align: center;
+            font-weight: 600;
+            box-shadow: 0 8px 15px rgba(74, 105, 189, 0.3);
+        }
+
+        .quote-box p {
+            color: var(--white);
+            margin: 0;
+        }
+
+        /* Share Buttons Fixed at Bottom */
+        .share-bar {
+            position: fixed;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 480px;
+            background: var(--white);
+            padding: 15px 25px;
+            box-sizing: border-box;
+            display: flex;
+            gap: 15px;
+            box-shadow: 0 -5px 15px rgba(0,0,0,0.05);
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            z-index: 100;
+        }
+
+        .share-btn {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px;
+            border-radius: 12px;
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            transition: transform 0.2s;
+        }
+
+        .share-btn:active {
+            transform: scale(0.95);
+        }
+
+        .whatsapp { background: #25D366; }
+        .facebook { background: #1877F2; }
+        .twitter { background: #1DA1F2; }
+
+        /* Solution Section */
+        .solution-section {
+            background: #2f3542;
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+        }
+
+        .solution-section h2 {
+            color: #ffda79;
+        }
+
+        .solution-section p {
+            color: #dfe4ea;
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <!-- Hero Section -->
+        <header class="hero-section">
+            <span class="badge">சமூகப் பார்வை</span>
+            <img src="https://images.unsplash.com/photo-1499209974431-9dddcece7f88?q=80&w=1000&auto=format&fit=crop" alt="Life Cycle" class="hero-img">
+        </header>
+
+        <!-- Content Section -->
+        <article class="content">
+            <h1 class="title">வாழ்க்கை என்னும் சக்கரம்: மனிதனும் சமூகத்தின் எழுதப்படாத விதிகளும்</h1>
+            
+            <div class="author-meta">
+                <span><i class="fas fa-calendar-alt"></i> ஆகஸ்ட் 2026</span>
+                <span style="margin: 0 10px;">|</span>
+                <span><i class="fas fa-clock"></i> 5 நிமிடம் வாசிக்க</span>
+            </div>
+
+            <p>ஒரு குழந்தை பிறக்கிறது. அது ஆணோ, பெண்ணோ, அதன் எதிர்காலப் பயணம் இந்த சமூகத்தால் ஏற்கனவே எழுதி வைக்கப்பட்டுவிடுகிறது. பள்ளி, கல்லூரி எனப் படித்து முடித்ததும், ஒரு தற்காலிக வேலையில் சேர்வதோடு இந்தச் சக்கரத்தின் முதல் சுற்று தொடங்குகிறது.</p>
+
+            <div class="story-card">
+                <h2><i class="fas fa-male"></i> ஆணின் சுமைகள்</h2>
+                <p>ஒரு பையனாக இருந்தால், அவனுக்கு சமூகத்தின் எதிர்பார்ப்புகள் மிக அதிகம். அவன் தன் வாழ்க்கையில் 'செட்டில்' ஆக வேண்டும். நல்ல சம்பளம், வெளிநாடு செல்வது, ஒரு சொந்த வீடு கட்டுவது என ஓட வேண்டும். வீட்டின் EMI சுமை குறையும் போது அல்லது நிரந்தரமான வருமானம் வரும்போதுதான் அவனுக்குத் திருமணப் பேச்சே ஆரம்பிக்கும். திருமணத்திற்குப் பிறகு, தன் பெற்றோர்கள், மனைவி, எதிர்காலக் குழந்தைகள் என அனைவரையும் சுமக்கும் பொறுப்பு அவனது தோள்களில் ஏறுகிறது.</p>
+            </div>
+
+            <div class="story-card accent">
+                <h2><i class="fas fa-female"></i> பெண்ணின் தியாகங்கள்</h2>
+                <p>ஒரு பெண்ணாக இருந்தால், திருமணத்திற்குப் பிறகு அவளது உலகம் வேறு விதமாக மாறுகிறது. வீட்டு வேலைகளைச் செய்வது, கணவனைக் கவனித்துக்கொள்வது, மாமனார் மாமியாரைப் பராமரிப்பது, சுவையான உணவுகளைச் சமைப்பது என அவளுக்கான விதிகள் எழுதப்பட்டுள்ளன. அதன் பிறகு கர்ப்பகால சவால்கள், குழந்தையைப் பெற்றெடுத்து வளர்ப்பது, அதற்கும் அதே கல்வியைக் கொடுப்பது என அவளது பயணம் தொடர்கிறது.</p>
+            </div>
+
+            <div class="quote-box">
+                <p>"இந்தச் சக்கரத்தில் ஒரு சுற்று மீண்டும் மீண்டும் சுழன்றுகொண்டே இருக்கிறது. ஆனால், இதில் ஏதேனும் ஒன்று தவறினால் என்ன ஆகும்?"</p>
+            </div>
+
+            <div class="story-card">
+                <h2><i class="fas fa-users"></i> சமூகத்தின் தீர்ப்புகள்</h2>
+                <p>30 முதல் 35 வயதைக் கடந்தும் ஒரு ஆணுக்குத் திருமணம் ஆகவில்லை என்றால், இந்தச் சமூகம் அவனை ஒரு வேற்றுக்கிரக வாசியைப் போல் பார்க்கும். அவனுக்குத் திருமணம் நடப்பதே ஒரு மிகப்பெரிய போராட்டமாக மாறிவிடும். திருமணம் முடிந்து 4 வருடங்கள் ஆகியும் குழந்தை பிறக்கவில்லை என்றால், தம்பதியினரை கேள்விகளால் துளைத்தெடுக்கும். ஆண் வேலைக்குச் செல்லவில்லை என்றாலோ, பெண் சரியாக சமைக்காமல் வீட்டு வேலைகளைச் செய்யவில்லை என்றாலோ, சமூகத்தின் விமர்சனக் கணைகள் அவர்களைத் தாக்கத் தொடங்கும்.</p>
+                <p><strong>இந்த விதிகளைப் பின்பற்றுபவன் 'வெற்றியாளன்' எனப் புகழப்படுகிறான். இதில் தடுமாறுபவனோ, சமூகத்தின் பார்வையில் ஒரு 'கோமாளியாக' மாற்றப்படுகிறான்.</strong></p>
+            </div>
+
+            <div class="story-card success">
+                <h2><i class="fas fa-landmark"></i> வரலாற்றுப் பார்வை: எப்படி உருவானது இந்தச் சக்கரம்?</h2>
+                <p><strong>கி.மு (BC) காலகட்டம்:</strong> ஆதிமனிதன் காடுகளில் வாழ்ந்தபோது இந்தச் சுழற்சி இல்லை. பசித்தால் வேட்டையாடினான், உறங்கினான். அங்கே சொத்து சேர்க்கும் எண்ணமோ, குடும்பம் என்ற அமைப்போ பெரிதாக இல்லை.</p>
+                <p><strong>கி.பி (AD) காலகட்டம்:</strong> விவசாயம் செய்யத் தொடங்கியதும், நிலம் என்ற சொத்து உருவானது. சொத்தைப் பாதுகாக்க வாரிசுகள் தேவைப்பட்டனர். அதிலிருந்து குடும்பம் என்ற அமைப்பு ஆழமாக வேரூன்றியது. பின்னர் வந்த தொழில் புரட்சியும் (Industrial Revolution), இன்றைய கார்ப்பரேட் உலகமும் மனிதனை EMI-க்குள் அடைத்து, இந்த நவீன சமூக அமைப்பை உருவாக்கி விட்டது.</p>
+            </div>
+
+            <div class="story-card">
+                <h2><i class="fas fa-route"></i> சக்கரத்தை உடைத்தவர்கள் (The Bypassers)</h2>
+                <p>இந்தச் சமூகச் சக்கரத்தை உடைத்து வெளியே வந்தவர்களும் இருக்கிறார்கள். உதாரணமாக:</p>
+                <ul>
+                    <li><strong>யோகிகள் மற்றும் சித்தர்கள்:</strong> இவர்கள் சமூகத்தின் எதிர்பார்ப்புகளைத் துறந்து, தங்களின் அக அமைதிக்காக இயற்கையோடு ஒன்றி வாழ்கிறார்கள். இவர்களுக்குத் திருமணம், சொத்து, வேலை என்ற எந்த அழுத்தமும் இல்லை.</li>
+                    <li><strong>வெளிநாட்டினர் (Western Culture):</strong> சில வெளிநாடுகளில் இந்த அழுத்தம் குறைவு. 18 வயதிலேயே தனித்து வாழத் தொடங்குவார்கள். திருமணம் செய்யாமலேயே சேர்ந்து வாழ்வது (Co-habitation), குழந்தை பெற்றுக்கொள்ளாமல் இருப்பது (DINK - Double Income No Kids), அல்லது 40 வயதில் உலகத்தைச் சுற்றிப் பார்ப்பது என தங்களுக்குப் பிடித்தபடி விதியை மீறி வாழ்கிறார்கள்.</li>
+                </ul>
+            </div>
+
+            <div class="solution-section">
+                <h2><i class="fas fa-lightbulb"></i> முடிவுரை மற்றும் தீர்வு</h2>
+                <p>சமூகம் என்பது மனிதர்களால் உருவாக்கப்பட்டது. ஆனால், நாமே உருவாக்கிய அந்தச் சக்கரத்தின் அடியில் நாம் நசுங்கக் கூடாது. பொறுப்புகள் அவசியமே, ஆனால் மற்றவர்களைத் திருப்திப்படுத்த வேண்டும் என்பதற்காகவே வாழ்வது முட்டாள்தனம்.</p>
+                <p><strong>தீர்வு:</strong> முதலில் உங்களுக்கு எது மகிழ்ச்சி தருகிறது என்பதைக் கண்டறியுங்கள். 30 வயதில் திருமணம் நடக்கவில்லையா? அதற்காக வாழ்க்கையே முடிந்துவிடவில்லை. குழந்தை இல்லையா? வேறு வழிகளில் உங்கள் அன்பைப் பகிருங்கள். சமூகத்தின் விமர்சனங்களை ஒரு செய்தித்தாள் போலப் படித்துவிட்டு கடந்து செல்ல பழகுங்கள். உங்கள் வாழ்க்கையின் ரிமோட் கண்ட்ரோல் உங்கள் கைகளில் மட்டுமே இருக்க வேண்டும், சமூகத்தின் கைகளில் அல்ல!</p>
+            </div>
+            
+            <div style="height: 40px;"></div> <!-- Spacing for bottom bar -->
+        </article>
+
+        <!-- Fixed Share Bar -->
+        <div class="share-bar">
+            <!-- Replace YOUR_URL with actual URL in production -->
+            <a href="whatsapp://send?text=வாழ்க்கை என்னும் சக்கரம்: மனிதனும் சமூகத்தின் எழுதப்படாத விதிகளும். இதைப் படியுங்கள்: https://yourwebsite.com/human-lifecycle-tamil" class="share-btn whatsapp">
+                <i class="fab fa-whatsapp"></i> Share
+            </a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://yourwebsite.com/human-lifecycle-tamil" target="_blank" class="share-btn facebook">
+                <i class="fab fa-facebook-f"></i> Share
+            </a>
+            <a href="https://twitter.com/intent/tweet?text=வாழ்க்கை என்னும் சக்கரம்!&url=https://yourwebsite.com/human-lifecycle-tamil" target="_blank" class="share-btn twitter">
+                <i class="fab fa-twitter"></i> Tweet
+            </a>
+        </div>
+    </div>
+
+</body>
+      </html>
+  
