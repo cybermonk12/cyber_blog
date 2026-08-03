@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ta">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- OG Meta Tags for Social Sharing -->
+    <meta property="og:title" content="தீவிரவாதம்: உலகளாவிய வரலாறு, உளவியல் மற்றும் அறிவியல் | Author: MR. X">
+    <meta property="og:description" content="தீவிரவாதத்தின் உருவாக்கம், உளவியல் காரணிகள், தொழில்நுட்ப சவால்கள் மற்றும் உலக அரசியலை அலசும் ஆழமான பதிவு.">
+    <meta property="og:image" content="https://picsum.photos/600/400?random=1">
+    <meta property="og:type" content="article">
+    
+    <title>தீவிரவாதம்: வரலாறு மற்றும் அறிவியல் | MR. X</title>
+    
+    <style>
+        /* Modern Light Color Scheme */
+        :root {
+            --primary: #1e3c72; 
+            --secondary: #2a5298; 
+            --accent: #ff4757; 
+            --text-main: #2f3542; 
+            --bg-page: #eef2f3; 
+            --bg-app: #ffffff; 
+            --box-bg: #f8f9fa; 
+        }
+
+        body { 
+            margin: 0; 
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+            background-color: var(--bg-page); 
+            display: flex;
+            justify-content: center;
+        }
+
+        .app-container { 
+            width: 100%;
+            max-width: 480px; 
+            background: var(--bg-app); 
+            min-height: 100vh; 
+            position: relative; 
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1); 
+        }
+
+        header { 
+            background: linear-gradient(135deg, var(--primary), var(--secondary)); 
+            color: #fff; 
+            padding: 45px 20px 25px 20px; 
+            text-align: center; 
+            border-bottom-left-radius: 30px; 
+            border-bottom-right-radius: 30px; 
+            position: relative;
+            box-shadow: 0 5px 15px rgba(30, 60, 114, 0.3);
+        }
+
+        header h1 { 
+            margin: 0; 
+            font-size: 1.4rem; 
+            line-height: 1.5;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
+        }
+
+        .author { 
+            font-size: 1rem; 
+            color: #ffd32a; 
+            font-weight: 900; 
+            margin-top: 15px; 
+            letter-spacing: 1px;
+        }
+
+        /* Music Button Styling */
+        .music-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid #fff;
+            color: #fff;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(5px);
+            z-index: 100;
+        }
+
+        .music-btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: scale(1.05); 
+        }
+
+        .content { 
+            padding: 20px; 
+            padding-bottom: 90px; 
+        }
+
+        /* Image Container */
+        .img-container { 
+            width: 100%; 
+            border-radius: 15px; 
+            overflow: hidden; 
+            margin: 20px 0; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1); 
+            background: #e0e0e0; /* Placeholder color */
+            position: relative;
+        }
+
+        .img-container img { 
+            width: 100%; 
+            height: 200px;
+            object-fit: cover;
+            display: block; 
+            transition: transform 0.5s ease; 
+        }
+
+        .img-container:hover img {
+            transform: scale(1.08); 
+        }
+
+        /* Content Boxes */
+        .box { 
+            background: var(--box-bg); 
+            border-left: 5px solid var(--accent); 
+            padding: 20px; 
+            margin: 25px 0; 
+            border-radius: 10px; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05); 
+            transition: transform 0.3s ease, box-shadow 0.3s ease; 
+        }
+
+        .box:hover {
+            transform: translateY(-5px); 
+            box-shadow: 0 8px 20px rgba(0,0,0,0.12); 
+        }
+
+        .box h2 { 
+            margin-top: 0; 
+            color: var(--primary); 
+            font-size: 1.25rem; 
+            border-bottom: 2px dashed #dcdde1;
+            padding-bottom: 10px;
+        }
+
+        p { 
+            font-size: 0.95rem; 
+            text-align: justify; 
+            color: var(--text-main);
+            line-height: 1.8;
+            margin-bottom: 0;
+        }
+
+        /* Bottom Navigation Bar */
+        .bottom-nav { 
+            position: fixed; 
+            bottom: 0; 
+            width: 100%; 
+            max-width: 480px;
+            background: #fff; 
+            display: flex; 
+            justify-content: space-around; 
+            padding: 12px 0; 
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.08); 
+            border-top-left-radius: 25px;
+            border-top-right-radius: 25px;
+            z-index: 10;
+        }
+
+        .nav-btn { 
+            background: var(--primary); 
+            color: #fff; 
+            border: none; 
+            padding: 12px 25px; 
+            border-radius: 25px; 
+            font-weight: bold; 
+            cursor: pointer; 
+            text-decoration: none; 
+            font-size: 0.9rem; 
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .nav-btn:hover {
+            transform: translateY(-3px); 
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn.share {
+            background: var(--accent);
+        }
+
+        .nav-btn.share:hover {
+            background: #e84118;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <button class="music-btn" id="musicBtn" onclick="toggleMusic()">🔇 Play Music</button>
+            <h1>தீவிரவாதம்: ஒரு வரலாற்று, உளவியல் மற்றும் சமூகப் பார்வை</h1>
+            <div class="author">✍️ By MR. X</div>
+        </header>
+        
+        <div class="content">
+            <!-- Background Audio (Autoplay removed for browser compatibility) -->
+            <!-- Using a reliable Wikimedia Commons ambient sound -->
+            <audio id="bgAudio" loop preload="auto">
+                <source src="https://upload.wikimedia.org/wikipedia/commons/5/5b/Dark_Ambient_Loop.ogg" type="audio/ogg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <!-- Image 1: Using Picsum for 100% reliable loading -->
+            <div class="img-container">
+                <img src="https://picsum.photos/id/1073/600/400" alt="Chaos and Society Concept">
+            </div>
+
+            <div class="box">
+                <h2>அறிமுகம்: இருண்ட சித்தாந்தம்</h2>
+                <p>தீவிரவாதம் என்பது வெறுமனே ஆயுதங்களால் நடத்தப்படும் போர் அல்ல; அது மனிதர்களின் மனங்களில் அச்சத்தை விதைத்து, அதன் மூலம் ஒரு குறிப்பிட்ட அரசியல் அல்லது சித்தாந்த நோக்கங்களை அடைய நினைக்கும் ஒரு கொடூரமான உத்தியாகும். இது எப்போதுமே அப்பாவிகளை பலிகடாவாக்குகிறது மற்றும் உலக அமைதிக்கு மிகப்பெரிய அச்சுறுத்தலாக உள்ளது.</p>
+            </div>
+
+            <div class="box">
+                <h2>வரலாற்றுப் பின்னணி: தாலிபான் முதல் அமெரிக்கா வரை</h2>
+                <p>தீவிரவாதத்தின் வேர்கள் பல அரசியல் மோதல்களில் புதைந்துள்ளன. பனிப்போர் (Cold War) காலத்தில் பல குழுக்கள் அரசியல் காரணங்களுக்காக உருவாக்கப்பட்டன. உதாரணமாக, தாலிபான் மற்றும் அல்-கொய்தா (Al-Qaeda) போன்ற அமைப்புகள் ஆப்கானிஸ்தான் போர்களின் பின்னணியில் உருவெடுத்தன. 2001 செப்டம்பர் 11 (9/11) தாக்குதலுக்குப் பிறகு, அமெரிக்கா தீவிரவாதத்திற்கு எதிரான உலகளாவிய போரை (War on Terror) அறிவித்தது.</p>
+            </div>
+
+            <!-- Image 2: Using Picsum for 100% reliable loading -->
+            <div class="img-container">
+                <img src="https://picsum.photos/id/1084/600/400" alt="Dark Theme Background">
+            </div>
+
+            <div class="box">
+                <h2>உளவியல்: தற்கொலைப் படையினரின் அறிவியல்</h2>
+                <p>ஏன் ஒரு மனிதன் தனது சொந்த உயிரை மாய்த்துக்கொள்ளத் துணிகிறான்? தீவிரவாத அமைப்புகள் பெரும்பாலும் சமூகத்தில் தனிமைப்படுத்தப்பட்ட, உளவியல் ரீதியான அழுத்தம் (Social Anxiety and Pressure) மற்றும் அதிருப்தி கொண்ட இளைஞர்களையே குறிவைக்கின்றன. இவர்களுக்கு மூளைச்சலவை (Brainwashing) செய்யப்பட்டு, வன்முறை ஒரு 'புனிதமான தியாகம்' என்ற மாயை உருவாக்கப்படுகிறது.</p>
+            </div>
+
+            <div class="box">
+                <h2>தொழில்நுட்பம்: டெலிகிராம் மற்றும் என்க்ரிப்ஷன்</h2>
+                <p>இன்று தீவிரவாதிகள் டிஜிட்டல் தொழில்நுட்பத்தை தங்களின் தகவல் தொடர்புக்கு பயன்படுத்துகின்றனர். End-to-End Encryption கொண்ட Telegram போன்ற செயலிகள் அவர்களின் ரகசிய திட்டங்களுக்கு உதவுகின்றன. சமீபத்தில் இதன் நிறுவனர் பாவெல் துரோவ் (Pavel Durov) விவகாரம், தனிமனித சுதந்திரத்திற்கும் தேச பாதுகாப்பிற்கும் இடையிலான சிக்கலை வெட்டவெளிச்சமாக்கியுள்ளது.</p>
+            </div>
+            
+            <div class="box">
+                <h2>முடிவுரை (Conclusion)</h2>
+                <p>தீவிரவாதத்திற்கு "பாசிட்டிவ் பக்கம்" என்று ஒன்று கிடையவே கிடையாது; அது அழிவை மட்டுமே தரும். அரசுகள் ஆயுதங்களால் மட்டும் இதை வெல்ல முடியாது. வேலைவாய்ப்பு, சிறந்த கல்வி மற்றும் தீவிரவாதத்திற்கு நிதியுதவி கிடைப்பதைத் தடுப்பதன் மூலமே இந்த சமூக நோயை உலகத்திலிருந்து முற்றிலும் ஒழிக்க முடியும்.</p>
+            </div>
+        </div>
+
+        <div class="bottom-nav">
+            <a href="https://mydigitalseva.mr-sakthiv3l.workers.dev" class="nav-btn">🏠 Home</a>
+            <button class="nav-btn share" onclick="shareBlog()">🔗 Share</button>
+        </div>
+    </div>
+
+    <script>
+        const bgAudio = document.getElementById("bgAudio");
+        const musicBtn = document.getElementById("musicBtn");
+
+        // Initial setup for Volume
+        bgAudio.volume = 0.5;
+
+        // Manually toggle music to bypass browser restrictions
+        function toggleMusic() {
+            if (bgAudio.paused) {
+                bgAudio.play().then(() => {
+                    musicBtn.innerHTML = "🔊 Stop Music";
+                    musicBtn.style.background = "var(--accent)";
+                }).catch(error => {
+                    console.error("Audio playback failed:", error);
+                    alert("Audio couldn't be played. Check your browser permissions.");
+                });
+            } else {
+                bgAudio.pause();
+                musicBtn.innerHTML = "🔇 Play Music";
+                musicBtn.style.background = "rgba(0, 0, 0, 0.3)";
+            }
+        }
+
+        // Web Share API
+        function shareBlog() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'தீவிரவாதம்: வரலாறு மற்றும் அறிவியல் | MR. X',
+                    text: 'தீவிரவாதத்தின் தோற்றம், உலகளாவிய தாக்கம், உளவியல் மற்றும் தொழில்நுட்ப சவால்களை அலசும் ஆழமான தமிழ் பதிவு.',
+                    url: window.location.href
+                }).catch(console.error);
+            } else {
+                alert('உங்கள் பிரவுசரில் Share வசதி இல்லை. Link-ஐ Copy செய்து பகிரவும்.');
+            }
+        }
+    </script>
+
+</body>
+</html>
